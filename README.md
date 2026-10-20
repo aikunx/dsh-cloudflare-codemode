@@ -123,6 +123,15 @@ git clone https://github.com/aikunx/dsh-cloudflare-codemode.git
 dsh plugin --profile web add ./dsh-cloudflare-codemode
 ```
 
+### 方式四：插件市场源
+
+本仓库自带 `market.json`（format 1）。在 **设置 → 插件** 里把下面的市场索引地址加进去，
+即可在 Discover / 市场页直接看到并安装本插件：
+
+```
+https://raw.githubusercontent.com/aikunx/dsh-cloudflare-codemode/main/market.json
+```
+
 ### 安装后
 
 1. **重启 DSH**（新增 Host 插件必须重启才会加载）

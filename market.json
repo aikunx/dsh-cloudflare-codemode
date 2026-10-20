@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "title": {
+    "en": "aikunx · Cloudflare Code Mode",
+    "zh-cn": "aikunx · Cloudflare 全功能管家"
+  },
+  "description": {
+    "en": "DeepSeek Harness plugin that connects the official Cloudflare Code Mode MCP server: the model gets search + execute over 2,500+ Cloudflare API endpoints (Workers, DNS, R2, KV, D1, Pages, Zero Trust), with a visual settings panel for OAuth 2.1 or API token authentication.",
+    "zh-cn": "把 Cloudflare 官方 Code Mode MCP 接入 DeepSeek Harness：AI 通过 search / execute 两个工具访问 2,500+ Cloudflare API（Workers、DNS、R2、KV、D1、Pages、Zero Trust），并附带 OAuth 2.1 / API Token 双认证的可视化设置面板。"
+  },
+  "metadata": {
+    "categories": {
+      "integration": {
+        "title": {
+          "en": "Integration",
+          "zh-cn": "集成"
+        }
+      },
+      "infrastructure": {
+        "title": {
+          "en": "Infrastructure",
+          "zh-cn": "基础设施"
+        }
+      },
+      "developer-tools": {
+        "title": {
+          "en": "Developer Tools",
+          "zh-cn": "开发工具"
+        }
+      }
+    },
+    "labels": {
+      "official-mcp": {
+        "title": {
+          "en": "Official MCP",
+          "zh-cn": "官方 MCP"
+        }
+      },
+      "zero-dsh-deps": {
+        "title": {
+          "en": "No DSH runtime imports",
+          "zh-cn": "无 DSH 运行时依赖"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-cloudflare-codemode",
+      "title": {
+        "en": "Cloudflare Code Mode",
+        "zh-cn": "Cloudflare 全功能管家"
+      },
+      "description": {
+        "en": "Connect Cloudflare's official Code Mode MCP to DeepSeek Harness. The model gets two tools — search (query the full OpenAPI spec) and execute (run cloudflare.request()) — covering 2,500+ endpoints across every Cloudflare product: Workers, Pages, DNS, R2, KV, D1, Zero Trust, AI Gateway and more. A localhost proxy injects credentials per request, so tokens never enter profile config and changes apply without restarting. Settings panel supports OAuth 2.1 (PKCE + dynamic client registration) and API tokens; credentials stay on this machine at ~/.dsh/dsh-cloudflare-codemode.json.",
+        "zh-cn": "把 Cloudflare 官方 Code Mode MCP 接入 DeepSeek Harness。模型获得两个工具：search（检索完整 OpenAPI 规格）与 execute（执行 cloudflare.request()），覆盖 Workers、Pages、DNS、R2、KV、D1、Zero Trust、AI Gateway 等全部产品的 2,500+ 端点。本机代理逐请求注入凭据，Token 不写入 profile 配置、改动无需重启。设置面板支持 OAuth 2.1（PKCE + 动态客户端注册）与 API Token，凭据只存本机 ~/.dsh/dsh-cloudflare-codemode.json。"
+      },
+      "author": "aikunx",
+      "homepage": "https://github.com/aikunx/dsh-cloudflare-codemode#readme",
+      "icon": "icon.svg",
+      "repository": {
+        "url": "https://github.com/aikunx/dsh-cloudflare-codemode"
+      },
+      "metadata": {
+        "category": "integration",
+        "keywords": [
+          "cloudflare",
+          "mcp",
+          "code-mode",
+          "workers",
+          "pages",
+          "dns",
+          "r2",
+          "kv",
+          "d1",
+          "zero-trust",
+          "ai-gateway",
+          "oauth",
+          "infrastructure",
+          "devops",
+          "dsh-plugin",
+          "deepseek-harness"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1792531092,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/aikunx/dsh-cloudflare-codemode",
+            "commit": "d66e3ac67f4e974f4ef349dc095b07b2d4617ee3"
+          },
+          "engines": {
+            "dsh": "^0.2.0-rc.2"
+          }
+        }
+      ]
+    }
+  ]
+}
