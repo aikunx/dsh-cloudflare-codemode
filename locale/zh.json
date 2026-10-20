@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Cloudflare 全功能管家",
+    "description": "通过 Cloudflare 官方 Code Mode MCP 接入全部 2,500+ API：AI 可用 search 与 execute 两个工具动态调用任意 Cloudflare 端点，覆盖 Workers、DNS、R2、KV、D1、Zero Trust 等。支持 OAuth 2.1 浏览器授权或 API Token，凭据只存本机。"
+  }
+}

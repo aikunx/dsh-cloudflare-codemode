@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Cloudflare Code Mode">
+  <defs>
+    <linearGradient id="cfcCloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6821F"/>
+      <stop offset="1" stop-color="#FBB03B"/>
+    </linearGradient>
+    <linearGradient id="cfcBolt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2C3E50"/>
+      <stop offset="1" stop-color="#1B2733"/>
+    </linearGradient>
+  </defs>
+
+  <!-- stylised cloud: the product family, drawn as one continuous silhouette -->
+  <path fill="url(#cfcCloud)"
+        d="M45.4 45.5H17.8c-4.6 0-8.3-3.7-8.3-8.3 0-4.2 3.1-7.7 7.1-8.2.6-5.4 5.1-9.6 10.6-9.6 4.6 0 8.5 2.9 10 7.1 1-.4 2.1-.6 3.2-.6 4.5 0 8.2 3.4 8.6 7.8 3.5.5 6.2 3.5 6.2 7.1 0 3.9-3.2 7.1-7.1 7.1a7 7 0 0 1-2.7-.4z"
+        opacity="0.95"/>
+
+  <!-- code brackets + bolt: "Code Mode" -->
+  <path fill="url(#cfcBolt)"
+        d="M25.6 25.2 18.4 31l7.2 5.8-2 2.5-9.9-8 9.9-8 2 2.9zm14.8 0 2-2.9 9.9 8-9.9 8-2-2.5 7.2-5.8-7.2-5.1z"/>
+  <path fill="url(#cfcBolt)" d="M33.9 22.6h3.9l-5.2 15.2h-3.9l5.2-15.2z"/>
+</svg>

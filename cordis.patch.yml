@@ -1,0 +1,35 @@
+# dsh-cloudflare-codemode bundle patch.
+#
+# Two rows, in this order:
+#   1. cloudflare-codemode     — this plugin's Host half: config store, the local
+#                                auth-injecting proxy, and the settings routes.
+#   2. cloudflare-codemode-mcp — the shipped @deepseek-ai/dsh-mcp-client, pointed
+#                                at that proxy. It owns the MCP protocol and
+#                                registers Cloudflare's tools on ctx.tools as
+#                                mcp__cloudflare__search / mcp__cloudflare__execute.
+#
+# The plugin never wraps individual Cloudflare API calls: all coverage comes from
+# Cloudflare's own Code Mode MCP server.
+- insert:
+    - id: cloudflare-codemode
+      name: 'dsh-cloudflare-codemode'
+      config:
+        port: 18923
+
+    - id: cloudflare-codemode-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: cloudflare
+        transport: streamable-http
+        url: 'http://127.0.0.1:18923/mcp'
+        failOnStartupError: false
+        toolCallTimeoutMs: 180000
+        # Before the user saves a credential the proxy answers 401, so the first
+        # connection attempt always fails. A large attempt budget keeps retrying
+        # (at the 30 s ceiling) until a valid token appears, so saving one in the
+        # panel lights up the tools without restarting the host.
+        reconnect:
+          enabled: true
+          initialDelayMs: 1000
+          maxDelayMs: 30000
+          maxAttempts: 2000

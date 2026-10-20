@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Cloudflare Code Mode",
+    "description": "Brings Cloudflare's official Code Mode MCP into DSH: the model gets `search` and `execute` over 2,500+ REST endpoints, covering Workers, DNS, R2, KV, D1, Zero Trust and the rest. Connect with OAuth 2.1 or an API token; credentials stay on this machine."
+  }
+}

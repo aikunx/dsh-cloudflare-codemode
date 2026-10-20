@@ -1,0 +1,72 @@
+{
+  "name": "dsh-cloudflare-codemode",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "把 Cloudflare 官方 Code Mode MCP 接入 DeepSeek Harness：AI 通过 search / execute 两个工具动态访问 2,500+ Cloudflare API，覆盖 Workers、DNS、R2、KV、D1、Pages 等全部产品，并附带可视化设置面板。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cloudflare",
+    "mcp",
+    "code-mode",
+    "workers",
+    "dns",
+    "r2",
+    "kv",
+    "d1",
+    "pages"
+  ],
+  "license": "MIT",
+  "author": "aikunx",
+  "homepage": "https://github.com/aikunx/dsh-cloudflare-codemode#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aikunx/dsh-cloudflare-codemode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aikunx/dsh-cloudflare-codemode/issues"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
