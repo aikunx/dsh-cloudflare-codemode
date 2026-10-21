@@ -15,6 +15,23 @@ AI 拿到 `search` 与 `execute` 两个工具，就能动态访问 **2,500+ 个 
 
 ---
 
+## 快速开始
+
+```bash
+# 从 npm 安装（推荐）
+dsh plugin --profile web add dsh-cloudflare-codemode
+
+# 或从 GitHub 源码安装
+dsh plugin --profile web add github:aikunx/dsh-cloudflare-codemode
+```
+
+桌面端把 `web` 换成 `desktop`。装完**重启 DSH**、按 `Ctrl + Shift + R` 刷新页面，
+进入 **设置 → Cloudflare 全功能管家** 完成 OAuth 授权或填入 API Token。
+
+> 也可以通过市场源安装：把 `https://raw.githubusercontent.com/aikunx/dsh-cloudflare-codemode/main/market.json`
+> 加到 **设置 → 插件 → 市场源**。
+
+---
 ## 这是什么
 
 Cloudflare 在 2025 年上线了官方的 **Code Mode MCP 服务器** `https://mcp.cloudflare.com/mcp`。
